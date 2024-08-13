@@ -5,7 +5,7 @@ db.users.updateMany(
   {
       is_blocked: { $ne: true },
       country: { $ne: 'China' },
-      balance: { $gte: 0 }
+      balance: { $gt: 0 }
   },
   {
       $mul: { balance: 1.155 }
